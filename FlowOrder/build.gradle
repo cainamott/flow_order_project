@@ -25,12 +25,26 @@ repositories {
 }
 
 dependencies {
+	// 1. Core e Web
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// 2. Persistência (ADICIONADA)
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// 3. Mensageria
 	implementation 'org.springframework.kafka:spring-kafka'
+
+	// 4. Lombok (Compilador)
 	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	// 5. Desenvolvimento e Debug
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// 6. Driver do Banco de Dados
+	runtimeOnly 'org.postgresql:postgresql'
+
+	// 7. Testes
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
